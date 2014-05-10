@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A1412E2191DB6C40028CB0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E1191DB6C40028CB0A /* Foundation.framework */; };
+		6A1412E4191DB6C40028CB0A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E3191DB6C40028CB0A /* CoreGraphics.framework */; };
+		6A1412E6191DB6C40028CB0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E5191DB6C40028CB0A /* UIKit.framework */; };
+		6A1412E8191DB6C40028CB0A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E7191DB6C40028CB0A /* CoreData.framework */; };
+		6A1412EE191DB6C40028CB0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A1412EC191DB6C40028CB0A /* InfoPlist.strings */; };
+		6A1412F0191DB6C40028CB0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1412EF191DB6C40028CB0A /* main.m */; };
+		6A1412F4191DB6C40028CB0A /* GAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */; };
+		6A1412F7191DB6C40028CB0A /* GymApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A1412F5191DB6C40028CB0A /* GymApp.xcdatamodeld */; };
+		6A1412F9191DB6C40028CB0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A1412F8191DB6C40028CB0A /* Images.xcassets */; };
+		6A141300191DB6C40028CB0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412FF191DB6C40028CB0A /* XCTest.framework */; };
+		6A141301191DB6C40028CB0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E1191DB6C40028CB0A /* Foundation.framework */; };
+		6A141302191DB6C40028CB0A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E5191DB6C40028CB0A /* UIKit.framework */; };
+		6A141303191DB6C40028CB0A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E7191DB6C40028CB0A /* CoreData.framework */; };
+		6A14130B191DB6C40028CB0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A141309191DB6C40028CB0A /* InfoPlist.strings */; };
+		6A14130D191DB6C40028CB0A /* GymAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A14130C191DB6C40028CB0A /* GymAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A141304191DB6C40028CB0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A1412D6191DB6C30028CB0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A1412DD191DB6C40028CB0A;
+			remoteInfo = GymApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6A1412DE191DB6C40028CB0A /* GymApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1412E1191DB6C40028CB0A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6A1412E3191DB6C40028CB0A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6A1412E5191DB6C40028CB0A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6A1412E7191DB6C40028CB0A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6A1412EB191DB6C40028CB0A /* GymApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GymApp-Info.plist"; sourceTree = "<group>"; };
+		6A1412ED191DB6C40028CB0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6A1412EF191DB6C40028CB0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6A1412F1191DB6C40028CB0A /* GymApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GymApp-Prefix.pch"; sourceTree = "<group>"; };
+		6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAAppDelegate.h; sourceTree = "<group>"; };
+		6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAAppDelegate.m; sourceTree = "<group>"; };
+		6A1412F6191DB6C40028CB0A /* GymApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymApp.xcdatamodel; sourceTree = "<group>"; };
+		6A1412F8191DB6C40028CB0A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6A1412FE191DB6C40028CB0A /* GymAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A1412FF191DB6C40028CB0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6A141308191DB6C40028CB0A /* GymAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GymAppTests-Info.plist"; sourceTree = "<group>"; };
+		6A14130A191DB6C40028CB0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6A14130C191DB6C40028CB0A /* GymAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GymAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A1412DB191DB6C40028CB0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A1412E4191DB6C40028CB0A /* CoreGraphics.framework in Frameworks */,
+				6A1412E8191DB6C40028CB0A /* CoreData.framework in Frameworks */,
+				6A1412E6191DB6C40028CB0A /* UIKit.framework in Frameworks */,
+				6A1412E2191DB6C40028CB0A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A1412FB191DB6C40028CB0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A141300191DB6C40028CB0A /* XCTest.framework in Frameworks */,
+				6A141303191DB6C40028CB0A /* CoreData.framework in Frameworks */,
+				6A141302191DB6C40028CB0A /* UIKit.framework in Frameworks */,
+				6A141301191DB6C40028CB0A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A1412D5191DB6C30028CB0A = {
+			isa = PBXGroup;
+			children = (
+				6A1412E9191DB6C40028CB0A /* GymApp */,
+				6A141306191DB6C40028CB0A /* GymAppTests */,
+				6A1412E0191DB6C40028CB0A /* Frameworks */,
+				6A1412DF191DB6C40028CB0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6A1412DF191DB6C40028CB0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A1412DE191DB6C40028CB0A /* GymApp.app */,
+				6A1412FE191DB6C40028CB0A /* GymAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A1412E0191DB6C40028CB0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A1412E1191DB6C40028CB0A /* Foundation.framework */,
+				6A1412E3191DB6C40028CB0A /* CoreGraphics.framework */,
+				6A1412E5191DB6C40028CB0A /* UIKit.framework */,
+				6A1412E7191DB6C40028CB0A /* CoreData.framework */,
+				6A1412FF191DB6C40028CB0A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A1412E9191DB6C40028CB0A /* GymApp */ = {
+			isa = PBXGroup;
+			children = (
+				6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */,
+				6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */,
+				6A1412F8191DB6C40028CB0A /* Images.xcassets */,
+				6A1412F5191DB6C40028CB0A /* GymApp.xcdatamodeld */,
+				6A1412EA191DB6C40028CB0A /* Supporting Files */,
+			);
+			path = GymApp;
+			sourceTree = "<group>";
+		};
+		6A1412EA191DB6C40028CB0A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A1412EB191DB6C40028CB0A /* GymApp-Info.plist */,
+				6A1412EC191DB6C40028CB0A /* InfoPlist.strings */,
+				6A1412EF191DB6C40028CB0A /* main.m */,
+				6A1412F1191DB6C40028CB0A /* GymApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A141306191DB6C40028CB0A /* GymAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				6A14130C191DB6C40028CB0A /* GymAppTests.m */,
+				6A141307191DB6C40028CB0A /* Supporting Files */,
+			);
+			path = GymAppTests;
+			sourceTree = "<group>";
+		};
+		6A141307191DB6C40028CB0A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6A141308191DB6C40028CB0A /* GymAppTests-Info.plist */,
+				6A141309191DB6C40028CB0A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A1412DD191DB6C40028CB0A /* GymApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A141310191DB6C40028CB0A /* Build configuration list for PBXNativeTarget "GymApp" */;
+			buildPhases = (
+				6A1412DA191DB6C40028CB0A /* Sources */,
+				6A1412DB191DB6C40028CB0A /* Frameworks */,
+				6A1412DC191DB6C40028CB0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GymApp;
+			productName = GymApp;
+			productReference = 6A1412DE191DB6C40028CB0A /* GymApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6A1412FD191DB6C40028CB0A /* GymAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A141313191DB6C40028CB0A /* Build configuration list for PBXNativeTarget "GymAppTests" */;
+			buildPhases = (
+				6A1412FA191DB6C40028CB0A /* Sources */,
+				6A1412FB191DB6C40028CB0A /* Frameworks */,
+				6A1412FC191DB6C40028CB0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A141305191DB6C40028CB0A /* PBXTargetDependency */,
+			);
+			name = GymAppTests;
+			productName = GymAppTests;
+			productReference = 6A1412FE191DB6C40028CB0A /* GymAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A1412D6191DB6C30028CB0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				TargetAttributes = {
+					6A1412FD191DB6C40028CB0A = {
+						TestTargetID = 6A1412DD191DB6C40028CB0A;
+					};
+				};
+			};
+			buildConfigurationList = 6A1412D9191DB6C30028CB0A /* Build configuration list for PBXProject "GymApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6A1412D5191DB6C30028CB0A;
+			productRefGroup = 6A1412DF191DB6C40028CB0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A1412DD191DB6C40028CB0A /* GymApp */,
+				6A1412FD191DB6C40028CB0A /* GymAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A1412DC191DB6C40028CB0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A1412EE191DB6C40028CB0A /* InfoPlist.strings in Resources */,
+				6A1412F9191DB6C40028CB0A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A1412FC191DB6C40028CB0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A14130B191DB6C40028CB0A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A1412DA191DB6C40028CB0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A1412F7191DB6C40028CB0A /* GymApp.xcdatamodeld in Sources */,
+				6A1412F4191DB6C40028CB0A /* GAAppDelegate.m in Sources */,
+				6A1412F0191DB6C40028CB0A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A1412FA191DB6C40028CB0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A14130D191DB6C40028CB0A /* GymAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A141305191DB6C40028CB0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A1412DD191DB6C40028CB0A /* GymApp */;
+			targetProxy = 6A141304191DB6C40028CB0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6A1412EC191DB6C40028CB0A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A1412ED191DB6C40028CB0A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6A141309191DB6C40028CB0A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A14130A191DB6C40028CB0A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A14130E191DB6C40028CB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6A14130F191DB6C40028CB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A141311191DB6C40028CB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GymApp/GymApp-Prefix.pch";
+				INFOPLIST_FILE = "GymApp/GymApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6A141312191DB6C40028CB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GymApp/GymApp-Prefix.pch";
+				INFOPLIST_FILE = "GymApp/GymApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6A141314191DB6C40028CB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GymApp.app/GymApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GymApp/GymApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GymAppTests/GymAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6A141315191DB6C40028CB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GymApp.app/GymApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GymApp/GymApp-Prefix.pch";
+				INFOPLIST_FILE = "GymAppTests/GymAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A1412D9191DB6C30028CB0A /* Build configuration list for PBXProject "GymApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A14130E191DB6C40028CB0A /* Debug */,
+				6A14130F191DB6C40028CB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A141310191DB6C40028CB0A /* Build configuration list for PBXNativeTarget "GymApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A141311191DB6C40028CB0A /* Debug */,
+				6A141312191DB6C40028CB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6A141313191DB6C40028CB0A /* Build configuration list for PBXNativeTarget "GymAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A141314191DB6C40028CB0A /* Debug */,
+				6A141315191DB6C40028CB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6A1412F5191DB6C40028CB0A /* GymApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6A1412F6191DB6C40028CB0A /* GymApp.xcdatamodel */,
+			);
+			currentVersion = 6A1412F6191DB6C40028CB0A /* GymApp.xcdatamodel */;
+			path = GymApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6A1412D6191DB6C30028CB0A /* Project object */;
+}

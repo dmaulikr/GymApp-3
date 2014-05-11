@@ -11,6 +11,5 @@
 @interface GAAddExerciseController : UIViewController
 
 @property (nonatomic) NSString *workout_name;
-@property (nonatomic) NSManagedObjectContext *moc;
 
 @end

@@ -8,9 +8,10 @@
 
 #import "GAListWorkoutsTableViewController.h"
 #import "Workout.h"
+#import "GAAppDelegate.h"
 
 @interface GAListWorkoutsTableViewController ()
-
+@property (nonatomic) NSManagedObjectContext *moc;
 @end
 
 @implementation GAListWorkoutsTableViewController
@@ -59,6 +60,8 @@
 
 // method to get workouts from Models
 - (void) fetchRecords {
+    GAAppDelegate *ad = (GAAppDelegate*)[UIApplication sharedApplication].delegate;
+    [self setMoc:ad.managedObjectContext];
     NSFetchRequest *request =[NSFetchRequest fetchRequestWithEntityName:@"Workout"];
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"workout_name" ascending:NO selector:@selector(localizedStandardCompare:)];
     request.sortDescriptors = @[sortDescriptor];

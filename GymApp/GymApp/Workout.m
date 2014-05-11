@@ -12,9 +12,9 @@
 
 @implementation Workout
 
-@dynamic workout_name;
 @dynamic workout_date;
 @dynamic workout_lastdate;
+@dynamic workout_name;
 @dynamic exercises;
 
 @end

@@ -10,7 +10,6 @@
 
 @interface GAListWorkoutsTableViewController : UITableViewController
 
-@property (nonatomic) NSManagedObjectContext *moc;
 @property (nonatomic) NSArray *workouts;
 
 - (void) fetchRecords;

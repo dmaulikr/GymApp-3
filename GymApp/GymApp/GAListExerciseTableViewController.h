@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GANewWorkoutViewController.h"
 
 @interface GAListExerciseTableViewController : UITableViewController
 
-@property (nonatomic) NSMutableArray *exercises;
+@property (nonatomic) GANewWorkoutViewController *superView;
 
 @end

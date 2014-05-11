@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - WelcomeViewController-->
         <scene sceneID="I0U-rM-2B5">
             <objects>
-                <viewController id="i72-Gn-Jac" sceneMemberID="viewController">
+                <viewController title="WelcomeViewController" id="i72-Gn-Jac" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KGh-5i-cj6"/>
                         <viewControllerLayoutGuide type="bottom" id="I1P-pi-IhR"/>
@@ -38,17 +38,17 @@
                                 <state key="normal" title="Existing Workout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="VMB-VB-Xox" kind="modal" identifier="existing_workout" id="r2W-bO-nah"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <segue destination="VMB-VB-Xox" kind="modal" identifier="existing_workout" id="fdu-Vx-yaa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yfs-wq-Jc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116" y="4"/>
+            <point key="canvasLocation" x="-1204" y="420"/>
         </scene>
         <!--List Workouts Table View Controller-->
         <scene sceneID="tcj-5V-1hK">
@@ -92,14 +92,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lo4-aK-Uhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="480"/>
+            <point key="canvasLocation" x="-626" y="896"/>
         </scene>
         <!--List Exercise Table View Controller-->
         <scene sceneID="Alr-zk-fEg">
             <objects>
                 <tableViewController id="Gz7-re-ttI" customClass="GAListExerciseTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uWG-SE-tdp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -120,12 +120,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2o8-qr-cxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221" y="-1298"/>
+            <point key="canvasLocation" x="-99" y="-882"/>
         </scene>
-        <!--View Controller-->
+        <!--New Workout View Controller-->
         <scene sceneID="X6s-oC-rvm">
             <objects>
-                <viewController id="YhS-vH-ejp" sceneMemberID="viewController">
+                <viewController id="YhS-vH-ejp" customClass="GANewWorkoutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="siK-FP-1DF"/>
                         <viewControllerLayoutGuide type="bottom" id="FGa-MK-KVb"/>
@@ -150,7 +150,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PFG-Ki-Zqk" kind="modal" id="7Zm-r3-SH1"/>
+                                    <segue destination="PFG-Ki-Zqk" kind="modal" identifier="add" id="7Zm-r3-SH1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Workout Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlh-PQ-9fP">
@@ -160,7 +160,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XRe-cc-1Rp">
-                                <rect key="frame" x="34" y="100" width="207" height="30"/>
+                                <rect key="frame" x="34" y="100" width="266" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -181,10 +181,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="name_text" destination="XRe-cc-1Rp" id="IKS-S6-Y6v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ts-hB-vfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="-312"/>
+            <point key="canvasLocation" x="-626" y="104"/>
         </scene>
         <!--Add Exercise Controller-->
         <scene sceneID="PUh-B4-k7D">
@@ -260,16 +263,14 @@
                     </view>
                     <connections>
                         <outlet property="exercise_field" destination="SJ4-OW-Lgs" id="yg8-t7-0G4"/>
-                        <outlet property="exercise_label" destination="SJ4-OW-Lgs" id="YRU-Gw-pfG"/>
                         <outlet property="problem_label" destination="5m2-Oo-tcm" id="lYq-5K-NjA"/>
                         <outlet property="set_field" destination="pnS-Vl-dUh" id="azN-4I-55c"/>
-                        <outlet property="set_label" destination="pnS-Vl-dUh" id="Iyg-JI-2Ef"/>
                         <segue destination="YhS-vH-ejp" kind="modal" identifier="submit_exercise" id="VAd-Rk-sr1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCB-j6-rAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717" y="-863"/>
+            <point key="canvasLocation" x="397" y="-447"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -278,6 +279,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GYp-1b-FE3"/>
+        <segue reference="VAd-Rk-sr1"/>
     </inferredMetricsTieBreakers>
 </document>

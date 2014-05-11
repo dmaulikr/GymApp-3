@@ -13,9 +13,9 @@
 
 @interface Workout : NSManagedObject
 
-@property (nonatomic, retain) NSString * workout_name;
 @property (nonatomic, retain) NSDate * workout_date;
 @property (nonatomic, retain) NSDate * workout_lastdate;
+@property (nonatomic, retain) NSString * workout_name;
 @property (nonatomic, retain) NSSet *exercises;
 @end
 

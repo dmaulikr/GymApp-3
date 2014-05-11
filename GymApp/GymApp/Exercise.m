@@ -13,9 +13,9 @@
 @implementation Exercise
 
 @dynamic exercise_name;
-@dynamic num_sets;
 @dynamic num_reps;
+@dynamic num_sets;
 @dynamic rank;
-@dynamic workout;
+@dynamic workout_name;
 
 @end

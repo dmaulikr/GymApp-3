@@ -10,17 +10,20 @@
 #import "GANewWorkoutViewController.h"
 #import "Exercise.h"
 #import "Workout.h"
+#import "GAAppDelegate.h"
 
 @interface GAAddExerciseController ()
 @property (weak, nonatomic) IBOutlet UITextField *exercise_field;
 @property (weak, nonatomic) IBOutlet UITextField *set_field;
 @property (weak, nonatomic) IBOutlet UILabel *problem_label;
 - (IBAction)add_exercise_OnClick:(UIButton *)sender;
+@property (weak, nonatomic) NSManagedObjectContext * moc;
 
 @end
 
 @implementation GAAddExerciseController
-@synthesize exercise_field, set_field, problem_label, moc, workout_name;
+@synthesize exercise_field, set_field, problem_label, workout_name, moc;
+//@synthesize moc;
 static int rank;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -48,12 +51,20 @@ static int rank;
 // fetch records
 - (id) fetchWorkout {
     NSFetchRequest *request =[NSFetchRequest fetchRequestWithEntityName:@"Workout"];
-    request.predicate = [NSPredicate predicateWithFormat:@"Workout.workout_name = %@",[self workout_name]];
+    request.predicate = [NSPredicate predicateWithFormat:@"workout_name = %@",[self workout_name]];
     NSError *e;
     NSArray *tmp = [[self moc] executeFetchRequest:request error:&e];
     if (!tmp) {
         // error occured in fetch
         NSLog(@"%@", e);
+    }
+    if ([tmp count] == 0) {
+        // in this case we make the workout and return it
+        GAAppDelegate *ad = (GAAppDelegate*)[UIApplication sharedApplication].delegate;
+        [self setMoc:ad.managedObjectContext];
+        Workout *workout = [NSEntityDescription insertNewObjectForEntityForName:@"Workout" inManagedObjectContext:[self moc]];
+        workout.workout_name = self.workout_name;
+        return workout;
     }
     return tmp[0];
 }
@@ -68,6 +79,7 @@ static int rank;
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"submit_exercise"]) {
         GANewWorkoutViewController *vc = (GANewWorkoutViewController *)segue.destinationViewController;
+        NSLog(@"GAAddExerciseController-Workout name: %@", [self workout_name]);
         vc.workout_name = [self workout_name];
     }
 }
@@ -90,9 +102,12 @@ static int rank;
         return;
     }
     
+    GAAppDelegate *ad = (GAAppDelegate*)[UIApplication sharedApplication].delegate;
+    [self setMoc:ad.managedObjectContext];
     // set, submit, and segue
     Workout *w = (Workout *)[self fetchWorkout];
-    Exercise *e = [[Exercise alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Exercise" inManagedObjectContext:self.moc];
+    Exercise *e = [[Exercise alloc] initWithEntity:entity insertIntoManagedObjectContext:[self moc]];
     e.rank = [NSNumber numberWithInt:rank];
     e.num_sets = [NSNumber numberWithInt:num];
     e.exercise_name = ex;

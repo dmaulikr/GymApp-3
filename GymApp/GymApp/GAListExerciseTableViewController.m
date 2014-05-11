@@ -7,12 +7,15 @@
 //
 
 #import "GAListExerciseTableViewController.h"
+#import "GAAppDelegate.h"
 
 @interface GAListExerciseTableViewController ()
-
+@property (nonatomic) NSArray *exerciseList;
+@property (nonatomic) NSManagedObjectContext *moc;
 @end
 
 @implementation GAListExerciseTableViewController
+@synthesize exerciseList, moc;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,6 +39,7 @@
 
 - (void) viewWillAppear:(BOOL)animated {
     // fetch all exercises associated with workout
+    [self fetchExercises];
 }
 
 
@@ -49,16 +53,28 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[self exerciseList] count];
+}
+
+- (void) fetchExercises {
+    GAAppDelegate *ad = (GAAppDelegate*)[UIApplication sharedApplication].delegate;
+    [self setMoc:ad.managedObjectContext];
+    NSFetchRequest *request =[NSFetchRequest fetchRequestWithEntityName:@"Exercise"];
+    request.predicate = [NSPredicate predicateWithFormat:@"workout_name = %@",self.superView.workout_name];
+    NSError *e;
+    NSArray *tmp = [[self moc] executeFetchRequest:request error:&e];
+    if (!tmp) {
+        // error occured in fetch
+        NSLog(@"%@", e);
+    }
+    [self setExerciseList:tmp];
 }
 
 /*

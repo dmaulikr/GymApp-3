@@ -14,9 +14,9 @@
 @interface Exercise : NSManagedObject
 
 @property (nonatomic, retain) NSString * exercise_name;
-@property (nonatomic, retain) NSNumber * num_sets;
 @property (nonatomic, retain) NSNumber * num_reps;
+@property (nonatomic, retain) NSNumber * num_sets;
 @property (nonatomic, retain) NSNumber * rank;
-@property (nonatomic, retain) Workout *workout;
+@property (nonatomic, retain) Workout *workout_name;
 
 @end

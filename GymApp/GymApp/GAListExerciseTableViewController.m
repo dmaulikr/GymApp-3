@@ -34,6 +34,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    // fetch all exercises associated with workout
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

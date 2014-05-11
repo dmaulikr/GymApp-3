@@ -28,6 +28,7 @@
 		6A141332191F36DE0028CB0A /* GAAddExerciseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A141331191F36DD0028CB0A /* GAAddExerciseController.m */; };
 		6A141335191F42F50028CB0A /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A141334191F42F50028CB0A /* Workout.m */; };
 		6A141338191F42F50028CB0A /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A141337191F42F50028CB0A /* Exercise.m */; };
+		6A14133B191F51550028CB0A /* GANewWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A14133A191F51550028CB0A /* GANewWorkoutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		6A141334191F42F50028CB0A /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
 		6A141336191F42F50028CB0A /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
 		6A141337191F42F50028CB0A /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
+		6A141339191F51550028CB0A /* GANewWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANewWorkoutViewController.h; sourceTree = "<group>"; };
+		6A14133A191F51550028CB0A /* GANewWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GANewWorkoutViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				6A141316191DB7A90028CB0A /* mainSB.storyboard */,
 				6A141330191F36DD0028CB0A /* GAAddExerciseController.h */,
 				6A141331191F36DD0028CB0A /* GAAddExerciseController.m */,
+				6A141339191F51550028CB0A /* GANewWorkoutViewController.h */,
+				6A14133A191F51550028CB0A /* GANewWorkoutViewController.m */,
 				6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */,
 				6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */,
 				6A1412EA191DB6C40028CB0A /* Supporting Files */,
@@ -285,6 +290,7 @@
 				6A14131A191EE31E0028CB0A /* GAListExerciseTableViewController.m in Sources */,
 				6A141338191F42F50028CB0A /* Exercise.m in Sources */,
 				6A1412F4191DB6C40028CB0A /* GAAppDelegate.m in Sources */,
+				6A14133B191F51550028CB0A /* GANewWorkoutViewController.m in Sources */,
 				6A1412F0191DB6C40028CB0A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

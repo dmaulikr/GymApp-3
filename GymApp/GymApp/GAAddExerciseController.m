@@ -7,6 +7,7 @@
 //
 
 #import "GAAddExerciseController.h"
+#import "GANewWorkoutViewController.h"
 #import "Exercise.h"
 #import "Workout.h"
 
@@ -65,6 +66,10 @@ static int rank;
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"submit_exercise"]) {
+        GANewWorkoutViewController *vc = (GANewWorkoutViewController *)segue.destinationViewController;
+        vc.workout_name = [self workout_name];
+    }
 }
 
 

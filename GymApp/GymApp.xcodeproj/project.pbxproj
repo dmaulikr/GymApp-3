@@ -135,6 +135,10 @@
 		6A1412E9191DB6C40028CB0A /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
+				6A14131B191F25660028CB0A /* GAListWorkoutsTableViewController.h */,
+				6A14131C191F25660028CB0A /* GAListWorkoutsTableViewController.m */,
+				6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */,
+				6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */,
 				6A1412F8191DB6C40028CB0A /* Images.xcassets */,
 				6A1412F5191DB6C40028CB0A /* Model.xcdatamodeld */,
 				6A141336191F42F50028CB0A /* Exercise.h */,
@@ -156,10 +160,6 @@
 		6A1412EA191DB6C40028CB0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6A14131B191F25660028CB0A /* GAListWorkoutsTableViewController.h */,
-				6A14131C191F25660028CB0A /* GAListWorkoutsTableViewController.m */,
-				6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */,
-				6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */,
 				6A1412EB191DB6C40028CB0A /* GymApp-Info.plist */,
 				6A1412EC191DB6C40028CB0A /* InfoPlist.strings */,
 				6A1412EF191DB6C40028CB0A /* main.m */,
@@ -488,6 +488,7 @@
 				6A141312191DB6C40028CB0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A141313191DB6C40028CB0A /* Build configuration list for PBXNativeTarget "GymAppTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +497,7 @@
 				6A141315191DB6C40028CB0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

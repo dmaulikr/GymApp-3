@@ -14,7 +14,7 @@
 		6A1412EE191DB6C40028CB0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A1412EC191DB6C40028CB0A /* InfoPlist.strings */; };
 		6A1412F0191DB6C40028CB0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1412EF191DB6C40028CB0A /* main.m */; };
 		6A1412F4191DB6C40028CB0A /* GAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */; };
-		6A1412F7191DB6C40028CB0A /* GymApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A1412F5191DB6C40028CB0A /* GymApp.xcdatamodeld */; };
+		6A1412F7191DB6C40028CB0A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A1412F5191DB6C40028CB0A /* Model.xcdatamodeld */; };
 		6A1412F9191DB6C40028CB0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A1412F8191DB6C40028CB0A /* Images.xcassets */; };
 		6A141300191DB6C40028CB0A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412FF191DB6C40028CB0A /* XCTest.framework */; };
 		6A141301191DB6C40028CB0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E1191DB6C40028CB0A /* Foundation.framework */; };
@@ -22,6 +22,8 @@
 		6A141303191DB6C40028CB0A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E7191DB6C40028CB0A /* CoreData.framework */; };
 		6A14130B191DB6C40028CB0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A141309191DB6C40028CB0A /* InfoPlist.strings */; };
 		6A14130D191DB6C40028CB0A /* GymAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A14130C191DB6C40028CB0A /* GymAppTests.m */; };
+		6A141317191DB7A90028CB0A /* mainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A141316191DB7A90028CB0A /* mainStoryboard.storyboard */; };
+		6A14131A191EE31E0028CB0A /* GAListExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +48,16 @@
 		6A1412F1191DB6C40028CB0A /* GymApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GymApp-Prefix.pch"; sourceTree = "<group>"; };
 		6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAAppDelegate.h; sourceTree = "<group>"; };
 		6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAAppDelegate.m; sourceTree = "<group>"; };
-		6A1412F6191DB6C40028CB0A /* GymApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GymApp.xcdatamodel; sourceTree = "<group>"; };
+		6A1412F6191DB6C40028CB0A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		6A1412F8191DB6C40028CB0A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A1412FE191DB6C40028CB0A /* GymAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GymAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A1412FF191DB6C40028CB0A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6A141308191DB6C40028CB0A /* GymAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GymAppTests-Info.plist"; sourceTree = "<group>"; };
 		6A14130A191DB6C40028CB0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6A14130C191DB6C40028CB0A /* GymAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GymAppTests.m; sourceTree = "<group>"; };
+		6A141316191DB7A90028CB0A /* mainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainStoryboard.storyboard; sourceTree = "<group>"; };
+		6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAListExerciseTableViewController.h; sourceTree = "<group>"; };
+		6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAListExerciseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +123,10 @@
 				6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */,
 				6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */,
 				6A1412F8191DB6C40028CB0A /* Images.xcassets */,
-				6A1412F5191DB6C40028CB0A /* GymApp.xcdatamodeld */,
+				6A1412F5191DB6C40028CB0A /* Model.xcdatamodeld */,
+				6A141316191DB7A90028CB0A /* mainStoryboard.storyboard */,
+				6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */,
+				6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */,
 				6A1412EA191DB6C40028CB0A /* Supporting Files */,
 			);
 			path = GymApp;
@@ -231,6 +239,7 @@
 			files = (
 				6A1412EE191DB6C40028CB0A /* InfoPlist.strings in Resources */,
 				6A1412F9191DB6C40028CB0A /* Images.xcassets in Resources */,
+				6A141317191DB7A90028CB0A /* mainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +258,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A1412F7191DB6C40028CB0A /* GymApp.xcdatamodeld in Sources */,
+				6A1412F7191DB6C40028CB0A /* Model.xcdatamodeld in Sources */,
+				6A14131A191EE31E0028CB0A /* GAListExerciseTableViewController.m in Sources */,
 				6A1412F4191DB6C40028CB0A /* GAAppDelegate.m in Sources */,
 				6A1412F0191DB6C40028CB0A /* main.m in Sources */,
 			);
@@ -460,13 +470,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		6A1412F5191DB6C40028CB0A /* GymApp.xcdatamodeld */ = {
+		6A1412F5191DB6C40028CB0A /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				6A1412F6191DB6C40028CB0A /* GymApp.xcdatamodel */,
+				6A1412F6191DB6C40028CB0A /* Model.xcdatamodel */,
 			);
-			currentVersion = 6A1412F6191DB6C40028CB0A /* GymApp.xcdatamodel */;
-			path = GymApp.xcdatamodeld;
+			currentVersion = 6A1412F6191DB6C40028CB0A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

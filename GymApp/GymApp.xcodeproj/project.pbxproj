@@ -22,8 +22,11 @@
 		6A141303191DB6C40028CB0A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1412E7191DB6C40028CB0A /* CoreData.framework */; };
 		6A14130B191DB6C40028CB0A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6A141309191DB6C40028CB0A /* InfoPlist.strings */; };
 		6A14130D191DB6C40028CB0A /* GymAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A14130C191DB6C40028CB0A /* GymAppTests.m */; };
-		6A141317191DB7A90028CB0A /* mainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A141316191DB7A90028CB0A /* mainStoryboard.storyboard */; };
+		6A141317191DB7A90028CB0A /* mainSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A141316191DB7A90028CB0A /* mainSB.storyboard */; };
 		6A14131A191EE31E0028CB0A /* GAListExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */; };
+		6A14131D191F25660028CB0A /* GAListWorkoutsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A14131C191F25660028CB0A /* GAListWorkoutsTableViewController.m */; };
+		6A141329191F33940028CB0A /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A141328191F33940028CB0A /* Exercise.m */; };
+		6A14132C191F33950028CB0A /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A14132B191F33950028CB0A /* Workout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +58,15 @@
 		6A141308191DB6C40028CB0A /* GymAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GymAppTests-Info.plist"; sourceTree = "<group>"; };
 		6A14130A191DB6C40028CB0A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6A14130C191DB6C40028CB0A /* GymAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GymAppTests.m; sourceTree = "<group>"; };
-		6A141316191DB7A90028CB0A /* mainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainStoryboard.storyboard; sourceTree = "<group>"; };
+		6A141316191DB7A90028CB0A /* mainSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainSB.storyboard; sourceTree = "<group>"; };
 		6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAListExerciseTableViewController.h; sourceTree = "<group>"; };
 		6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAListExerciseTableViewController.m; sourceTree = "<group>"; };
+		6A14131B191F25660028CB0A /* GAListWorkoutsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAListWorkoutsTableViewController.h; sourceTree = "<group>"; };
+		6A14131C191F25660028CB0A /* GAListWorkoutsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAListWorkoutsTableViewController.m; sourceTree = "<group>"; };
+		6A141327191F33940028CB0A /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		6A141328191F33940028CB0A /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
+		6A14132A191F33950028CB0A /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
+		6A14132B191F33950028CB0A /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,13 +129,17 @@
 		6A1412E9191DB6C40028CB0A /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
-				6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */,
-				6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */,
 				6A1412F8191DB6C40028CB0A /* Images.xcassets */,
 				6A1412F5191DB6C40028CB0A /* Model.xcdatamodeld */,
-				6A141316191DB7A90028CB0A /* mainStoryboard.storyboard */,
+				6A14132A191F33950028CB0A /* Workout.h */,
+				6A14132B191F33950028CB0A /* Workout.m */,
+				6A141327191F33940028CB0A /* Exercise.h */,
+				6A141328191F33940028CB0A /* Exercise.m */,
+				6A141316191DB7A90028CB0A /* mainSB.storyboard */,
 				6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */,
 				6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */,
+				6A14131B191F25660028CB0A /* GAListWorkoutsTableViewController.h */,
+				6A14131C191F25660028CB0A /* GAListWorkoutsTableViewController.m */,
 				6A1412EA191DB6C40028CB0A /* Supporting Files */,
 			);
 			path = GymApp;
@@ -135,6 +148,8 @@
 		6A1412EA191DB6C40028CB0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */,
+				6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */,
 				6A1412EB191DB6C40028CB0A /* GymApp-Info.plist */,
 				6A1412EC191DB6C40028CB0A /* InfoPlist.strings */,
 				6A1412EF191DB6C40028CB0A /* main.m */,
@@ -239,7 +254,7 @@
 			files = (
 				6A1412EE191DB6C40028CB0A /* InfoPlist.strings in Resources */,
 				6A1412F9191DB6C40028CB0A /* Images.xcassets in Resources */,
-				6A141317191DB7A90028CB0A /* mainStoryboard.storyboard in Resources */,
+				6A141317191DB7A90028CB0A /* mainSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A14131D191F25660028CB0A /* GAListWorkoutsTableViewController.m in Sources */,
+				6A141329191F33940028CB0A /* Exercise.m in Sources */,
+				6A14132C191F33950028CB0A /* Workout.m in Sources */,
 				6A1412F7191DB6C40028CB0A /* Model.xcdatamodeld in Sources */,
 				6A14131A191EE31E0028CB0A /* GAListExerciseTableViewController.m in Sources */,
 				6A1412F4191DB6C40028CB0A /* GAAppDelegate.m in Sources */,

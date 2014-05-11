@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13B3116" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Exercise" syncable="YES">
+    <entity name="Exercise" representedClassName="Exercise" syncable="YES">
         <attribute name="exercise_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="num_reps" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="num_sets" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <relationship name="lift_instance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lift" inverseName="exercises" inverseEntity="Lift" syncable="YES"/>
+        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exercises" inverseEntity="Workout" syncable="YES"/>
     </entity>
-    <entity name="Lift" syncable="YES">
-        <attribute name="lift_date" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="lift_instance" inverseEntity="Exercise" syncable="YES"/>
-        <relationship name="workout_instance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="lift_instance" inverseEntity="Workout" syncable="YES"/>
-    </entity>
-    <entity name="Workout" syncable="YES">
+    <entity name="Workout" representedClassName="Workout" syncable="YES">
+        <attribute name="workout_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="workout_lastdate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="workout_name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="lift_instance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lift" inverseName="workout_instance" inverseEntity="Lift" syncable="YES"/>
+        <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="workout" inverseEntity="Exercise" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Workout" positionX="-558" positionY="-198" width="128" height="73"/>
-        <element name="Lift" positionX="-335" positionY="-90" width="128" height="88"/>
-        <element name="Exercise" positionX="-155" positionY="74" width="128" height="103"/>
+        <element name="Workout" positionX="-729" positionY="-198" width="128" height="103"/>
+        <element name="Exercise" positionX="-459" positionY="-49" width="128" height="103"/>
     </elements>
 </model>

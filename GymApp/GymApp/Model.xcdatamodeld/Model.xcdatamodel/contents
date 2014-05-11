@@ -4,6 +4,7 @@
         <attribute name="exercise_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="num_reps" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="num_sets" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="exercises" inverseEntity="Workout" syncable="YES"/>
     </entity>
     <entity name="Workout" representedClassName="Workout" syncable="YES">
@@ -14,6 +15,6 @@
     </entity>
     <elements>
         <element name="Workout" positionX="-729" positionY="-198" width="128" height="103"/>
-        <element name="Exercise" positionX="-459" positionY="-49" width="128" height="103"/>
+        <element name="Exercise" positionX="-459" positionY="-49" width="128" height="118"/>
     </elements>
 </model>

@@ -14,6 +14,7 @@
 @end
 
 @implementation GAListWorkoutsTableViewController
+@synthesize workouts, moc;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -71,7 +72,7 @@
 }
 
 // set cell to display name of workout
-// to do: add when most recently done to cell
+// to do: add when most recently done to cell (UITableViewCellStyle1)
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"WorkoutCell" forIndexPath:indexPath];

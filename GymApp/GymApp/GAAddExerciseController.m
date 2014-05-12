@@ -40,6 +40,8 @@ static int rank;
     [super viewDidLoad];
     rank = 1;
     // Do any additional setup after loading the view.
+    exercise_field.delegate = self;
+    set_field.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,6 +71,13 @@ static int rank;
     return tmp[0];
 }
 
+// Makes return button collapse keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
 
 #pragma mark - Navigation
 

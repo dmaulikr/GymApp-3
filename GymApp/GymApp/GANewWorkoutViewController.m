@@ -38,6 +38,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    name_text.delegate = self;
     if ([self workout_name] != nil) {
         NSLog(@"Workout name is %@", self.workout_name);
         NSString *s = [NSString stringWithString:[self workout_name]];
@@ -49,6 +50,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Makes return button collapse keyboard
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 #pragma mark - Navigation

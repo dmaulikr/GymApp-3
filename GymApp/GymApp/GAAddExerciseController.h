@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GAAddExerciseController : UIViewController
+@interface GAAddExerciseController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) NSString *workout_name;
 @property (strong, nonatomic) NSString *old_workout_name;

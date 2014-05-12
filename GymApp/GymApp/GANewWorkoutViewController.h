@@ -10,6 +10,7 @@
 
 @interface GANewWorkoutViewController : UIViewController
 
-@property (nonatomic) NSString *workout_name;
+@property (strong, nonatomic) NSString *workout_name;
+@property (strong, nonatomic) NSString *old_workout_name;
 
 @end

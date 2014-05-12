@@ -64,6 +64,8 @@
 }
 
 - (void) fetchExercises {
+    NSLog(@"Executing fetch for table view");
+    NSLog(@"Predicate is %@", self.superView.workout_name);
     GAAppDelegate *ad = (GAAppDelegate*)[UIApplication sharedApplication].delegate;
     [self setMoc:ad.managedObjectContext];
     NSFetchRequest *request =[NSFetchRequest fetchRequestWithEntityName:@"Exercise"];

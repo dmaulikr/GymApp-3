@@ -1,0 +1,9 @@
+Immediate:
+Write method to query all entities from CoreData and delete them
+    -This should eventually be hooked up to the app itself actually
+
+Get List container working
+    -Once that step works, it's a huge step forward
+
+Testing:
+Test out changing workout names while creating workout

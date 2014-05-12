@@ -22,7 +22,7 @@
 @end
 
 @implementation GAAddExerciseController
-@synthesize exercise_field, set_field, problem_label, workout_name, moc;
+@synthesize exercise_field, set_field, problem_label, workout_name, moc, old_workout_name;
 //@synthesize moc;
 static int rank;
 
@@ -51,7 +51,7 @@ static int rank;
 // fetch records
 - (id) fetchWorkout {
     NSFetchRequest *request =[NSFetchRequest fetchRequestWithEntityName:@"Workout"];
-    request.predicate = [NSPredicate predicateWithFormat:@"workout_name = %@",[self workout_name]];
+    request.predicate = [NSPredicate predicateWithFormat:@"workout_name = %@",[self old_workout_name]];
     NSError *e;
     NSArray *tmp = [[self moc] executeFetchRequest:request error:&e];
     if (!tmp) {
@@ -81,6 +81,7 @@ static int rank;
         GANewWorkoutViewController *vc = (GANewWorkoutViewController *)segue.destinationViewController;
         NSLog(@"GAAddExerciseController-Workout name: %@", [self workout_name]);
         vc.workout_name = [self workout_name];
+        NSLog(@"vc new workout name: %@", vc.workout_name);
     }
 }
 
@@ -106,6 +107,7 @@ static int rank;
     [self setMoc:ad.managedObjectContext];
     // set, submit, and segue
     Workout *w = (Workout *)[self fetchWorkout];
+    w.workout_name = self.workout_name;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Exercise" inManagedObjectContext:self.moc];
     Exercise *e = [[Exercise alloc] initWithEntity:entity insertIntoManagedObjectContext:[self moc]];
     e.rank = [NSNumber numberWithInt:rank];

@@ -29,6 +29,7 @@
 		6A14133B191F51550028CB0A /* GANewWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A14133A191F51550028CB0A /* GANewWorkoutViewController.m */; };
 		6AE4768B191FBE86005FAA18 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4768A191FBE86005FAA18 /* Exercise.m */; };
 		6AE4768E191FBE87005FAA18 /* Workout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE4768D191FBE87005FAA18 /* Workout.m */; };
+		6AE476901920877A005FAA18 /* Issues.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6AE4768F1920877A005FAA18 /* Issues.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		6AE4768A191FBE86005FAA18 /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
 		6AE4768C191FBE87005FAA18 /* Workout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workout.h; sourceTree = "<group>"; };
 		6AE4768D191FBE87005FAA18 /* Workout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workout.m; sourceTree = "<group>"; };
+		6AE4768F1920877A005FAA18 /* Issues.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Issues.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,8 @@
 		6A1412E9191DB6C40028CB0A /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
+				6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */,
+				6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */,
 				6A14131B191F25660028CB0A /* GAListWorkoutsTableViewController.h */,
 				6A14131C191F25660028CB0A /* GAListWorkoutsTableViewController.m */,
 				6A1412F8191DB6C40028CB0A /* Images.xcassets */,
@@ -148,8 +152,6 @@
 				6A141331191F36DD0028CB0A /* GAAddExerciseController.m */,
 				6A141339191F51550028CB0A /* GANewWorkoutViewController.h */,
 				6A14133A191F51550028CB0A /* GANewWorkoutViewController.m */,
-				6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */,
-				6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */,
 				6A1412EA191DB6C40028CB0A /* Supporting Files */,
 			);
 			path = GymApp;
@@ -158,6 +160,7 @@
 		6A1412EA191DB6C40028CB0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6AE4768F1920877A005FAA18 /* Issues.txt */,
 				6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */,
 				6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */,
 				6A1412EB191DB6C40028CB0A /* GymApp-Info.plist */,
@@ -262,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AE476901920877A005FAA18 /* Issues.txt in Resources */,
 				6A1412EE191DB6C40028CB0A /* InfoPlist.strings in Resources */,
 				6A1412F9191DB6C40028CB0A /* Images.xcassets in Resources */,
 				6A141317191DB7A90028CB0A /* mainSB.storyboard in Resources */,

@@ -1,7 +1,6 @@
 Immediate:
     
     -Add (-) button to remove cell from exercise list and db [MODERATE]
-    -Add cleared database popup [EASY]
 
 Testing:
 Test out changing workout names while creating workout
@@ -13,6 +12,7 @@ Things I've Learned:
 -Be careful with migrations/changing database!
 -You can delete the SQLite file in ~/Library/Application Support/iPhone Simulator/<version number>/Applications/<app key>/Documents
         -Delete all files, .shm and .wal are temporary
+-Relationships just point at an instance, sometimes you want both an attribute and a relationships
 
 -Distant Future:
     -Make custom type to replace NSLog to write only when debug mode is on

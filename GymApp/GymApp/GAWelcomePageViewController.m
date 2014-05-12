@@ -52,7 +52,19 @@
 
     // go to Model and delete everything
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [self clearAll];
+    }
+}
+
 - (IBAction)clearAll_onClick:(UIButton *)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Check" message:@"Are you sure you want to remove all workouts?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
+    [alert addButtonWithTitle:@"Yes"];
+    [alert show];
+}
+
+- (void) clearAll {
     // get the app delegate's moc
     GAAppDelegate *ad = (GAAppDelegate*)[UIApplication sharedApplication].delegate;
     [self setMoc:ad.managedObjectContext];
@@ -79,5 +91,9 @@
     for (int j = 0; j < [tmp2 count]; j++) {
         [self.moc deleteObject:(NSManagedObject *)tmp2[j]];
     }
+    
+    // alert the user
+    UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"Done" message:@"All workouts have been removed" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [a show];
 }
 @end

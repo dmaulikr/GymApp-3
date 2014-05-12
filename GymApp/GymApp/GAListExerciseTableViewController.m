@@ -14,6 +14,7 @@
 @property (nonatomic) NSMutableArray *exerciseList;
 @property (nonatomic) NSManagedObjectContext *moc;
 @property (nonatomic) NSString *workout_name;
+
 @end
 
 @implementation GAListExerciseTableViewController
@@ -152,5 +153,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

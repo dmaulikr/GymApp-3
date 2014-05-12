@@ -140,21 +140,9 @@
 		6A1412E9191DB6C40028CB0A /* GymApp */ = {
 			isa = PBXGroup;
 			children = (
-				6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */,
-				6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */,
-				6A1412F8191DB6C40028CB0A /* Images.xcassets */,
-				6A1412F5191DB6C40028CB0A /* Model.xcdatamodeld */,
-				6AE4769219213B6F005FAA18 /* Exercise.h */,
-				6AE4769319213B6F005FAA18 /* Exercise.m */,
-				6AE4769519213B70005FAA18 /* Workout.h */,
-				6AE4769619213B70005FAA18 /* Workout.m */,
+				6AE4768F1920877A005FAA18 /* Issues.txt */,
 				6A141316191DB7A90028CB0A /* mainSB.storyboard */,
-				6AE4769819213C30005FAA18 /* GAWelcomePageViewController.h */,
-				6AE4769919213C30005FAA18 /* GAWelcomePageViewController.m */,
-				6A141330191F36DD0028CB0A /* GAAddExerciseController.h */,
-				6A141331191F36DD0028CB0A /* GAAddExerciseController.m */,
-				6A141339191F51550028CB0A /* GANewWorkoutViewController.h */,
-				6A14133A191F51550028CB0A /* GANewWorkoutViewController.m */,
+				6AE4769B19217633005FAA18 /* Controllers */,
 				6A1412EA191DB6C40028CB0A /* Supporting Files */,
 			);
 			path = GymApp;
@@ -163,9 +151,14 @@
 		6A1412EA191DB6C40028CB0A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6A1412F8191DB6C40028CB0A /* Images.xcassets */,
+				6A1412F5191DB6C40028CB0A /* Model.xcdatamodeld */,
+				6AE4769219213B6F005FAA18 /* Exercise.h */,
+				6AE4769319213B6F005FAA18 /* Exercise.m */,
+				6AE4769519213B70005FAA18 /* Workout.h */,
+				6AE4769619213B70005FAA18 /* Workout.m */,
 				6A14131B191F25660028CB0A /* GAListWorkoutsTableViewController.h */,
 				6A14131C191F25660028CB0A /* GAListWorkoutsTableViewController.m */,
-				6AE4768F1920877A005FAA18 /* Issues.txt */,
 				6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */,
 				6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */,
 				6A1412EB191DB6C40028CB0A /* GymApp-Info.plist */,
@@ -192,6 +185,21 @@
 				6A141309191DB6C40028CB0A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AE4769B19217633005FAA18 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */,
+				6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */,
+				6AE4769819213C30005FAA18 /* GAWelcomePageViewController.h */,
+				6AE4769919213C30005FAA18 /* GAWelcomePageViewController.m */,
+				6A141330191F36DD0028CB0A /* GAAddExerciseController.h */,
+				6A141331191F36DD0028CB0A /* GAAddExerciseController.m */,
+				6A141339191F51550028CB0A /* GANewWorkoutViewController.h */,
+				6A14133A191F51550028CB0A /* GANewWorkoutViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

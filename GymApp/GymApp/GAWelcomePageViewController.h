@@ -8,5 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GAWelcomePageViewController : UIViewController
+@interface GAWelcomePageViewController : UIViewController <UIAlertViewDelegate>
 @end

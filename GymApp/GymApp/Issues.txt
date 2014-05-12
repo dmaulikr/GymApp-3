@@ -1,12 +1,18 @@
 Immediate:
-Write method to query all entities from CoreData and delete them [EASY]
-    -This should eventually be hooked up to the app itself actually [MODERATE]
-
-Get List container working [MODERATE]
-    -Once that step works, it's a huge step forward!
     
+    -Add (-) button to remove cell from exercise list and db [MODERATE]
+    -Add cleared database popup [EASY]
+
 Testing:
 Test out changing workout names while creating workout
 
 Easy-Moderate-Hard
 (1)-(2)-(3)
+
+Things I've Learned:
+-Be careful with migrations/changing database!
+-You can delete the SQLite file in ~/Library/Application Support/iPhone Simulator/<version number>/Applications/<app key>/Documents
+        -Delete all files, .shm and .wal are temporary
+
+-Distant Future:
+    -Make custom type to replace NSLog to write only when debug mode is on

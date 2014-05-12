@@ -8,10 +8,12 @@
 
 #import "GAListExerciseTableViewController.h"
 #import "GAAppDelegate.h"
+#import "Exercise.h"
 
 @interface GAListExerciseTableViewController ()
-@property (nonatomic) NSArray *exerciseList;
+@property (nonatomic) NSMutableArray *exerciseList;
 @property (nonatomic) NSManagedObjectContext *moc;
+@property (nonatomic) NSString *workout_name;
 @end
 
 @implementation GAListExerciseTableViewController
@@ -38,8 +40,14 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    // fetch all exercises associated with workout
-    [self fetchExercises];
+    GANewWorkoutViewController *vc = (GANewWorkoutViewController *)self.parentViewController;
+    if (self.workout_name == nil && vc.workout_name != nil) {
+        self.workout_name = vc.workout_name;
+        // fetch all exercises associated with workout
+        NSLog(@"OWn workout name %@", self.workout_name);
+        NSLog(@"vc workout name %@", vc.workout_name);
+        [self fetchExercises];
+    }
 }
 
 
@@ -65,30 +73,36 @@
 
 - (void) fetchExercises {
     NSLog(@"Executing fetch for table view");
-    NSLog(@"Predicate is %@", self.superView.workout_name);
+    NSLog(@"Predicate is %@", self.workout_name);
     GAAppDelegate *ad = (GAAppDelegate*)[UIApplication sharedApplication].delegate;
     [self setMoc:ad.managedObjectContext];
     NSFetchRequest *request =[NSFetchRequest fetchRequestWithEntityName:@"Exercise"];
-    request.predicate = [NSPredicate predicateWithFormat:@"workout_name = %@",self.superView.workout_name];
+    request.predicate = [NSPredicate predicateWithFormat:@"workout_name == %@",self.workout_name];
     NSError *e;
     NSArray *tmp = [[self moc] executeFetchRequest:request error:&e];
     if (!tmp) {
         // error occured in fetch
         NSLog(@"%@", e);
     }
-    [self setExerciseList:tmp];
+    NSLog(@"Number of results: %d", [tmp count]);
+    NSMutableArray *listArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [tmp count]; i++) {
+        Exercise *e = (Exercise *)tmp[i];
+        listArray[i] = e.exercise_name;
+    }
+    [self setExerciseList:listArray];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    cell.textLabel.text = self.exerciseList[indexPath.row];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -116,12 +116,13 @@ static int rank;
     [self setMoc:ad.managedObjectContext];
     // set, submit, and segue
     Workout *w = (Workout *)[self fetchWorkout];
-    w.workout_name = self.workout_name;
+    w.workout_name = [NSString stringWithString:self.workout_name];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Exercise" inManagedObjectContext:self.moc];
     Exercise *e = [[Exercise alloc] initWithEntity:entity insertIntoManagedObjectContext:[self moc]];
     e.rank = [NSNumber numberWithInt:rank];
     e.num_sets = [NSNumber numberWithInt:num];
     e.exercise_name = ex;
+    e.workout_name = w.workout_name;
     [w addExercisesObject:e];
     rank++;
     NSError *error;

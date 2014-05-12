@@ -11,6 +11,4 @@
 
 @interface GAListExerciseTableViewController : UITableViewController
 
-@property (nonatomic) GANewWorkoutViewController *superView;
-
 @end

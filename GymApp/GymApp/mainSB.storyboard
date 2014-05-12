@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - WelcomeViewController-->
+        <!--Welcome Page View Controller - WelcomeViewController-->
         <scene sceneID="I0U-rM-2B5">
             <objects>
-                <viewController title="WelcomeViewController" id="i72-Gn-Jac" sceneMemberID="viewController">
+                <viewController title="WelcomeViewController" id="i72-Gn-Jac" customClass="GAWelcomePageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KGh-5i-cj6"/>
                         <viewControllerLayoutGuide type="bottom" id="I1P-pi-IhR"/>
@@ -40,6 +40,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="VMB-VB-Xox" kind="modal" identifier="existing_workout" id="r2W-bO-nah"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lij-Q8-Mrg">
+                                <rect key="frame" x="97" y="419" width="127" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear All Workouts">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearAll_onClick:" destination="i72-Gn-Jac" eventType="touchUpInside" id="mmB-Oh-Ovd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,11 +109,11 @@
             <objects>
                 <tableViewController id="Gz7-re-ttI" customClass="GAListExerciseTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uWG-SE-tdp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ipV-1U-0NX">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ExCell" id="ipV-1U-0NX">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ipV-1U-0NX" id="mFK-c5-taR">
@@ -287,6 +297,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="VAd-Rk-sr1"/>
+        <segue reference="GYp-1b-FE3"/>
     </inferredMetricsTieBreakers>
 </document>

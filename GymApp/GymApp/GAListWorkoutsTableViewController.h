@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GAListWorkoutsTableViewController : UITableViewController
+@interface GAListWorkoutsTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic) NSArray *workouts;
+@property (nonatomic) NSMutableArray *workouts;
 
 - (void) fetchRecords;
 

@@ -157,8 +157,6 @@
 				6AE4769319213B6F005FAA18 /* Exercise.m */,
 				6AE4769519213B70005FAA18 /* Workout.h */,
 				6AE4769619213B70005FAA18 /* Workout.m */,
-				6A14131B191F25660028CB0A /* GAListWorkoutsTableViewController.h */,
-				6A14131C191F25660028CB0A /* GAListWorkoutsTableViewController.m */,
 				6A1412F2191DB6C40028CB0A /* GAAppDelegate.h */,
 				6A1412F3191DB6C40028CB0A /* GAAppDelegate.m */,
 				6A1412EB191DB6C40028CB0A /* GymApp-Info.plist */,
@@ -190,6 +188,8 @@
 		6AE4769B19217633005FAA18 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6A14131B191F25660028CB0A /* GAListWorkoutsTableViewController.h */,
+				6A14131C191F25660028CB0A /* GAListWorkoutsTableViewController.m */,
 				6A141318191EE31E0028CB0A /* GAListExerciseTableViewController.h */,
 				6A141319191EE31E0028CB0A /* GAListExerciseTableViewController.m */,
 				6AE4769819213C30005FAA18 /* GAWelcomePageViewController.h */,

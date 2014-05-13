@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "GANewWorkoutViewController.h"
 
-@interface GAListExerciseTableViewController : UITableViewController
+@interface GAListExerciseTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

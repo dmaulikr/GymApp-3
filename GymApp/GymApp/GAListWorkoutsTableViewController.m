@@ -12,10 +12,11 @@
 
 @interface GAListWorkoutsTableViewController ()
 @property (nonatomic) NSManagedObjectContext *moc;
+@property (strong, nonatomic) IBOutlet UITableView *tv;
 @end
 
 @implementation GAListWorkoutsTableViewController
-@synthesize workouts, moc;
+@synthesize workouts, moc, tv;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,12 +37,23 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tv.delegate = self;
+    self.tv.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [self setEditing:YES animated:YES];
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [super setEditing:editing animated:animated];
+    [self.tv setEditing:editing animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -67,7 +79,8 @@
     request.sortDescriptors = @[sortDescriptor];
     NSError *e;
     NSArray *tmp = [[self moc] executeFetchRequest:request error:&e];
-    [self setWorkouts:tmp];
+    NSMutableArray *m = [tmp mutableCopy];
+    [self setWorkouts:m];
     if (!tmp) {
         // error occured in fetch
         NSLog(@"%@", e);
@@ -87,27 +100,39 @@
 }
 
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
+        Workout *w = self.workouts[indexPath.row];
+        
+        // query db and remove this exercise
+        GAAppDelegate *ad = (GAAppDelegate*)[UIApplication sharedApplication].delegate;
+        [self setMoc:ad.managedObjectContext];
+        NSFetchRequest *request =[NSFetchRequest fetchRequestWithEntityName:@"Workout"];
+        request.predicate = [NSPredicate predicateWithFormat:@"workout_name == %@",w.workout_name];
+        NSError *error;
+        NSArray *tmp = [[self moc] executeFetchRequest:request error:&error];
+        [moc deleteObject:tmp[0]];
+        if (!tmp) {
+            // error occured in fetch
+            NSLog(@"%@", error);
+        }
+        [self.workouts removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+    }
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.

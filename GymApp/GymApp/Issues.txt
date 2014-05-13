@@ -1,6 +1,16 @@
 Immediate:
     
-    -Add (-) button to remove cell from exercise list and db [MODERATE]
+    -Add (-) button to remove cell from exercise list and exercise from db [MODERATE]
+    -Add (-) button to remove cell from workout list and workout from db [MODERATE]
+        -DON'T THINK EVERYTHING'S BEING DELETED FROM THE DB...
+
+    -Support rearranging order for exercise list
+    -Ensure uniqueness for all parts
+    -Can't have workouts that aren't being fully created left on the db
+        -Must leave those off, perhaps add boolean for whether fully created and sweep away all that haven't been (?)
+        -Ideally wouldnt store on db until person submits (or make partial workout class...and sweep away)
+    
+    -Once these are done, core functionalities of this stage are basically done
 
 Testing:
 Test out changing workout names while creating workout
@@ -15,4 +25,14 @@ Things I've Learned:
 -Relationships just point at an instance, sometimes you want both an attribute and a relationships
 
 -Distant Future:
-    -Make custom type to replace NSLog to write only when debug mode is on
+
+Stage 1: Setting up workout
+
+Stage 2: In Workout
+
+Stage 3: Design
+-deploy beta version at this point
+
+Stage 4: Social/Online
+
+Stage 5: Analytics
